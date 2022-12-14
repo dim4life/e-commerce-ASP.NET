@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BulkyBookWeb.Areas.Customer.Controllers
-{
-    public class HomeController : Controller
+namespace BulkyBookWeb.Controllers;
+[Area("Customer")]
+public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
@@ -29,4 +29,4 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}
+ 

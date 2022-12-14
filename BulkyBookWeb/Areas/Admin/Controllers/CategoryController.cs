@@ -3,8 +3,9 @@ using BulkyBook.DataAccess.Repository.IRepository;
 using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BulkyBookWeb.Areas.Admin.Controllers
-{
+namespace BulkyBookWeb.Controllers;
+    [Area("Admin")]
+
     public class CategoryController : Controller
     {
         private readonly IUnitOfwork _unitOfWork;
@@ -121,4 +122,4 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
     }
-}
+
